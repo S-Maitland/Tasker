@@ -1,16 +1,16 @@
 import Head from "next/head";
 
-export default function index() {
+export default function tasksScreen() {
   return (
     <>
       <Head>
-        <title>Home</title>
-        <meta name="description" content="Landing page for Tasker" />
+        <title>Tasker | Tasks</title>
+        <meta name="description" content="Tasks page for Tasker" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <h1>Home Screen</h1>
+      <h1>Tasks Screen</h1>
     </>
   );
 }

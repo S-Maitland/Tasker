@@ -1,0 +1,5 @@
+@use "../abstracts/colors" as colors;
+
+p {
+  color: colors.$addButton;
+}
