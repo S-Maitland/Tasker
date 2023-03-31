@@ -1,6 +1,23 @@
+import signUserIn, { auth, signIn } from "@/firebase/auth/signIn";
 import Head from "next/head";
+import React from "react";
+import { saveTask } from "../firebase/TaskOperations";
+import { useState } from "react";
 
-export default function index() {
+export default function Index() {
+  const [taskTitle, setTaskTitle] = useState("");
+
+  const handleSignIn = () => {};
+
+  const handleSaveTask = () => {
+    console.log(taskTitle);
+    saveTask(taskTitle);
+  };
+
+  const updateTaskTitle = (e) => {
+    setTaskTitle(e.target.value);
+  };
+
   return (
     <>
       <Head>
@@ -11,6 +28,11 @@ export default function index() {
       </Head>
 
       <h1>Home Screen</h1>
+      <form>
+        <input type="text" value={taskTitle} onChange={updateTaskTitle} />
+      </form>
+      <button onClick={handleSaveTask}>Save Task</button>
+      <button onClick={handleSignIn}>Sign In</button>
     </>
   );
 }
